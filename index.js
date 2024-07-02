@@ -1,8 +1,5 @@
-/* <div id="parent">
-    <div id="child">
-        <h1>This is h1 tag</h1>
-    </div>
-</div> */
+import React from "react";
+import ReactDOM from "react-dom/client"
 
 const parent = React.createElement("div",{id:"parent"},
     [React.createElement("div",{id:"child"},
@@ -21,3 +18,10 @@ root.render(parent);
 //     "h1",
 //     {id:"heading"},
 //     "Creating the react app");
+
+
+/* <div id="parent">
+    <div id="child">
+        <h1>This is h1 tag</h1>
+    </div>
+</div> */
