@@ -2,8 +2,9 @@
   "name": "react-lessons",
   "version": "1.0.0",
   "description": "This is the React minor detail understanding in my way.",
-  "main": "index.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -26,5 +27,8 @@
   },
   "devDependencies": {
     "process": "^0.11.10"
-  }
+  },
+  "browsersLists":[
+    "las 2 versions"
+  ]
 }
