@@ -85,6 +85,7 @@
 
 .card-img{
     width:200px;
+    height:120px;
     border-radius:4px;
 }
 
@@ -95,5 +96,5 @@
 .card-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    gap:20px;
 }
