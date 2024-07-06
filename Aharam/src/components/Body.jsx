@@ -4,6 +4,8 @@ import Shimmer from "./Shimmer";
 
 const Hero = () => {
     const [resData, setresData] = useState([]);
+    const [filterResData, setFilterResData] = useState([]);
+    const [searchInput, setSearchInput] = useState("");
 
     useEffect(() => {
         fetchData();
@@ -15,21 +17,22 @@ const Hero = () => {
         console.log(data);
         const restaurants = data?.data?.cards?.flatMap(card => card?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map(restaurant => restaurant.info) ?? []);
         setresData(restaurants);
+        setFilterResData(restaurants);
     };
 
-    if(resData.length === 0){
-        return (
-            <div className="shimme">
-                <Shimmer/>
-            </div>
-        )
-
-    }
-    
-    return (
+    return resData.length === 0 ? <Shimmer/> : (
         <div className="hero">
             <div className="search">
-                <input type="text" name="" id="" />
+                <input type="text" name="" id="" value={searchInput} 
+                    onChange={(e)=>{
+                        setSearchInput(e.target.value);
+                    }}
+                />
+                <button className="search-btn" onClick={()=>{
+                    console.log(searchInput);
+                     const filterSearch = resData.filter((res)=>res.name.toLowerCase().includes(searchInput.toLowerCase()));
+                       setFilterResData(filterSearch);
+                }}>Search</button>
             </div>
             <div className="buttons">
                 <button
@@ -43,7 +46,7 @@ const Hero = () => {
                 </button>
             </div>
             <div className="card-grid">
-                {resData.map((restaurant, index) => (
+                {filterResData.map((restaurant, index) => (
                     <Cards key={`${restaurant.id}-${index}`} resData={restaurant} />
                 ))}
             </div>

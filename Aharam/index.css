@@ -57,8 +57,9 @@
     height:40px;
     border:none;
     background:grey;
-    border-radius:16px;
+    border-radius:16px 0px 0px 16px;
     font-size:20px;
+    padding-left:10px;
 }
 
 .card{
@@ -154,7 +155,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:3px;
+    gap:10px;
 }
 
 .card > h3{
@@ -175,4 +176,15 @@
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
+}
+
+.search-btn{
+    width:100px;
+    height:40px;
+    border:none;
+    background:grey;
+    border-radius:0px 16px 16px 0px ;
+    font-size:20px;
+    align-text:center;
+    cursor:pointer;
 }
