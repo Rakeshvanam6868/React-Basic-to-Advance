@@ -1,0 +1,28 @@
+{
+  "name": "react-lessons",
+  "version": "1.0.0",
+  "description": "project k",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rakeshvanam6868/React-Basic-to-Advance.git"
+  },
+  "author": "Rakesh Vanam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rakeshvanam6868/React-Basic-to-Advance/issues"
+  },
+  "homepage": "https://github.com/Rakeshvanam6868/React-Basic-to-Advance#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
